@@ -14,15 +14,15 @@ public class BlackjackGame {
         dealerHand.addCard(deck.drawCard());
 
         // Player's turn
-        System.out.println(STR."Your hand: \{playerHand}");
-        System.out.println(STR."Your score: \{playerHand.calculateScore()}");
+        System.out.println("Your hand: " + playerHand);
+        System.out.println("Your score: " + playerHand.calculateScore());
         while (playerHand.calculateScore() < 21) {
             System.out.println("Do you want to Hit (H) or Stand (S)?");
             String choice = scanner.next();
             if (choice.equalsIgnoreCase("H")) {
                 playerHand.addCard(deck.drawCard());
-                System.out.println(STR."Your hand: \{playerHand}");
-                System.out.println(STR."Your score: \{playerHand.calculateScore()}");
+                System.out.println("Your hand: " + playerHand);
+                System.out.println("Your score: " + playerHand.calculateScore());
             } else if (choice.equalsIgnoreCase("S")) {
                 break;
             } else {
@@ -31,12 +31,12 @@ public class BlackjackGame {
         }
 
         // Dealer's turn
-        System.out.println(STR."Dealer's hand: \{dealerHand}");
-        System.out.println(STR."Dealer's score: \{dealerHand.calculateScore()}");
+        System.out.println("Dealer's hand: " + dealerHand);
+        System.out.println("Dealer's score: " + dealerHand.calculateScore());
         while (dealerHand.calculateScore() < 17) {
             dealerHand.addCard(deck.drawCard());
-            System.out.println(STR."Dealer hits. Dealer's hand: \{dealerHand}");
-            System.out.println(STR."Dealer's score: \{dealerHand.calculateScore()}");
+            System.out.println("Dealer hits. Dealer's hand: " + dealerHand);
+            System.out.println("Dealer's score: " + dealerHand.calculateScore());
         }
 
         // Determine winner

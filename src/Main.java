@@ -16,7 +16,7 @@ record Card(String suit, String rank) {
 
     @Override
     public String toString() {
-        return STR."\{rank} of \{suit}";
+        return rank + " of " + suit;
     }
 }
 
@@ -77,4 +77,3 @@ class Hand {
         return handString.toString();
     }
 }
-
